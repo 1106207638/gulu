@@ -1,14 +1,14 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <hj-button />
+  </div>
 </template>
 
 <script lang="ts">
-
 export default {
   data() {
     return {};
   },
-  components: {},
 };
 </script>
 <style lang="less" scoped>
