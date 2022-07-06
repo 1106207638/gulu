@@ -1,8 +1,7 @@
 <template>
   <button class="hj-button" :class="{ [`icon-${iconPostition}`]: true }">
-    <svg class="icon" v-if="icon" aria-hidden="true">
-      <use :xlink:href="`#i-${icon}`"></use>
-    </svg>
+    
+    <hj-icon v-if="icon" :name="icon"></hj-icon>
     <div class="content"><slot></slot></div>
   </button>
 </template>
@@ -12,7 +11,16 @@ export default {
   data() {
     return {};
   },
-  props: ["icon", "icon-postition"],
+  props: {
+    icon: {},
+    iconPostition: {
+      type: String,
+      default: "left",
+      validator(val) {
+        return val === "left" || val === "right";
+      },
+    },
+  },
 };
 </script>
 <style lang="less" scoped>
@@ -48,11 +56,10 @@ export default {
   &.icon-right {
     > .icon {
       order: 2;
-       margin: 0 0 0 0.1em;
+      margin: 0 0 0 0.1em;
     }
     > .content {
       order: 1;
-     
     }
   }
 }
