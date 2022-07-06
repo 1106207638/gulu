@@ -1,7 +1,7 @@
 <template>
-  <button class="hj-button" :class="{ [`icon-${iconPostition}`]: true }">
-    
-    <hj-icon v-if="icon" :name="icon"></hj-icon>
+  <button class="hj-button" :class="{ [`icon-${iconPostition}`]: true }" @click="btnClick">
+    <hj-icon  class='icon' v-if="icon && !loading" :name="icon"></hj-icon>
+    <hj-icon  class='icon' v-if="loading" name="jiazai"></hj-icon>
     <div class="content"><slot></slot></div>
   </button>
 </template>
@@ -13,6 +13,10 @@ export default {
   },
   props: {
     icon: {},
+    loading: {
+      type: Boolean,
+      default: false,
+    },
     iconPostition: {
       type: String,
       default: "left",
@@ -21,10 +25,15 @@ export default {
       },
     },
   },
+  methods:{
+    btnClick(){
+      console.log(1111)
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
-@import "../assets/css/commit.css";
+@import "../../assets/css/commit.css";
 
 .hj-button {
   height: var(--button-height);
