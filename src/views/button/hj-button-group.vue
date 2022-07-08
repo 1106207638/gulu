@@ -6,14 +6,16 @@
 <script lang="ts">
 export default {
   mounted() {
-    console.log(this.$el.children)
-    for(let i=0;i<this.$el.children.length;i++){
-        let oi = this.$el.children[i]
-        let name = oi.nodeName.toLowerCase()
-        console.log(name)
-        if(name !=='button'){
-            console.warn(`子元素存在非button标签，请将${name}标签换为hj-button标签`)
-        }
+    console.log(this.$el.children);
+    for (let i = 0; i < this.$el.children.length; i++) {
+      let oi = this.$el.children[i];
+      let name = oi.nodeName.toLowerCase();
+      console.log(name);
+      if (name !== "button") {
+        console.warn(
+          `子元素存在非button标签，请将${name}标签换为hj-button标签`
+        );
+      }
     }
   },
 };
@@ -23,7 +25,9 @@ export default {
   display: flex;
   > .hj-button {
     border-radius: 0;
-    margin-right: -1px;
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
     &:first-child {
       border-top-left-radius: var(--border-radius);
       border-bottom-left-radius: var(--border-radius);
