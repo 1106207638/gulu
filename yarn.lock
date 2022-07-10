@@ -1495,6 +1495,18 @@
   dependencies:
     "@types/node" "*"
 
+"@types/chai-spies@^1.0.3":
+  "integrity" "sha512-RBZjhVuK7vrg4rWMt04UF5zHYwfHnpk5mIWu3nQvU3AKGDixXzSjZ6v0zke6pBcaJqMv3IBZ5ibLWPMRDL0sLw=="
+  "resolved" "https://registry.npmjs.org/@types/chai-spies/-/chai-spies-1.0.3.tgz"
+  "version" "1.0.3"
+  dependencies:
+    "@types/chai" "*"
+
+"@types/chai@*", "@types/chai@^4.3.1":
+  "integrity" "sha512-/zPMqDkzSZ8t3VtxOa4KPq7uzzW978M9Tvh+j7GHKuo6k6GTLxPJ4J5gE5cjfJ26pnXst0N5Hax8Sr0T2Mi9zQ=="
+  "resolved" "https://registry.npmjs.org/@types/chai/-/chai-4.3.1.tgz"
+  "version" "4.3.1"
+
 "@types/connect-history-api-fallback@^1.3.5":
   "integrity" "sha512-h8QJa8xSb1WD4fpKBDcATDNGXghFj6/3GRWG6dhmRcu0RX1Ubasur2Uvx5aeEwlf0MwblEC2bMzzMQntxnw/Cw=="
   "resolved" "https://registry.npmmirror.com/@types/connect-history-api-fallback/-/connect-history-api-fallback-1.3.5.tgz"
@@ -2881,7 +2893,12 @@
   "resolved" "https://registry.npmmirror.com/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.4.0.tgz"
   "version" "2.4.0"
 
-"chai@^4.3.6":
+"chai-spies@^1.0.0":
+  "integrity" "sha512-elF2ZUczBsFoP07qCfMO/zeggs8pqCf3fZGyK5+2X4AndS8jycZYID91ztD9oQ7d/0tnS963dPkd0frQEThDsg=="
+  "resolved" "https://registry.npmjs.org/chai-spies/-/chai-spies-1.0.0.tgz"
+  "version" "1.0.0"
+
+"chai@*", "chai@^4.3.6":
   "integrity" "sha512-bbcp3YfHCUzMOvKqsztczerVgBKSsEijCySNlHHbX3VG1nskvqjz5Rfso1gGwD6w6oOV3eI60pKuMOV5MV7p3Q=="
   "resolved" "https://registry.npmjs.org/chai/-/chai-4.3.6.tgz"
   "version" "4.3.6"
