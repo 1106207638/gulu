@@ -2,7 +2,7 @@
   <button class="hj-button" :class="{ [`icon-${iconPostition}`]: true }" @click="btnClick">
     <hj-icon  class='icon' v-if="icon && !loading" :name="icon"></hj-icon>
     <hj-icon  class='icon' v-if="loading" name="jiazai"></hj-icon>
-    <div class="content"><slot></slot></div>
+    <div class="hj_button_content"><slot></slot></div>
   </button>
 </template>
 <script lang="ts">
@@ -59,7 +59,7 @@ export default {
     order: 1;
     margin: 0 0 0.1 0em;
   }
-  > .content {
+  > .hj_button_content {
     order: 2;
   }
   &.icon-right {
@@ -67,7 +67,7 @@ export default {
       order: 2;
       margin: 0 0 0 0.1em;
     }
-    > .content {
+    > .hj_button_content {
       order: 1;
     }
   }
